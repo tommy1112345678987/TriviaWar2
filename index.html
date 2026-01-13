@@ -2,29 +2,182 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>TriviaWar</title>
+    <title>TriviaWar – Presentazione</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #0f172a; /* blu scuro */
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
+        :root {
+            --bg: #0f172a;
+            --card: #111827;
+            --primary: #38bdf8;
+            --text: #e5e7eb;
+            --muted: #9ca3af;
         }
 
-        h1 {
-            font-size: 4rem;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #020617, #0f172a);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+        }
+
+        header h1 {
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            color: var(--primary);
             letter-spacing: 2px;
+        }
+
+        header p {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 700px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 80px 30px;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: var(--card);
+            padding: 30px;
+            border-radius: 14px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background-color: #020617;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        a.button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 35px;
+            background-color: var(--primary);
+            color: #020617;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 999px;
+            transition: background-color 0.3s ease;
+        }
+
+        a.button:hover {
+            background-color: #0ea5e9;
         }
     </style>
 </head>
+
 <body>
-    <h1>TriviaWar</h1>
-    <a href="https://github.com/nomeutente/triviawar/archive/refs/heads/main.zip">
-    Scarica TriviaWar (ZIP)
-</a>
+
+<header>
+    <div>
+        <h1>TriviaWar</h1>
+        <p>
+            TriviaWar è una web app interattiva che combina quiz a tema e dinamiche di gioco,
+            progettata per offrire un’esperienza divertente, intuitiva e coinvolgente direttamente dal browser.
+        </p>
+        <a href="#" class="button">Scopri il gioco</a>
+    </div>
+</header>
+
+<section>
+    <h2>Cos’è TriviaWar</h2>
+    <p>
+        TriviaWar è un gioco web basato su domande a scelta multipla, organizzate per categorie.
+        L’utente interagisce con l’applicazione tramite un’interfaccia semplice e chiara,
+        pensata per essere accessibile su qualsiasi dispositivo.
+    </p>
+</section>
+
+<section>
+    <h2>Funzionalità principali</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>🎯 Quiz tematici</h3>
+            <p>
+                Domande suddivise per argomento, con risposte immediate e feedback visivo.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🎡 Meccanica di gioco</h3>
+            <p>
+                Selezione casuale delle categorie per rendere ogni partita diversa.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>⚡ Web app leggera</h3>
+            <p>
+                Nessuna installazione: funziona direttamente dal browser.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🛠️ Codice strutturato</h3>
+            <p>
+                HTML, CSS e JavaScript organizzati in modo chiaro e manutenibile.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Obiettivo del progetto</h2>
+    <p>
+        L’obiettivo di TriviaWar è dimostrare la capacità di progettare e sviluppare una web app completa,
+        curando sia l’aspetto tecnico sia l’esperienza utente, secondo le buone pratiche dello sviluppo web.
+    </p>
+</section>
+
+<footer>
+    © TriviaWar – Progetto Web App
+</footer>
+
 </body>
 </html>
